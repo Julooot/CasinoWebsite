@@ -9,7 +9,6 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background: #212121;
 }
 
 *,
@@ -23,33 +22,39 @@ body {
 #app {
   width: 100%;
   height: 100%;
-  background: #212121;
+  background-image: url(background.png); /* Remplace cette URL par ton image */
+  background-size: cover; /* Couvrir tout l'écran */
+  background-position: center; /* Centrer l'image */
+  background-repeat: no-repeat; /* Ne pas répéter l'image */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative; /* Pour positionner les enfants en absolu si nécessaire */
 }
 
-/* Ajout de Styles pour le Texte en Haut */
+/* Texte Positionné au Centre de l'Écran */
 .header {
+  position: absolute;
+  top: 20%; /* Ajuste cette valeur pour placer le texte plus haut ou plus bas */
   text-align: center;
-  margin-bottom: 20px;
+  color: #ffeb3b; /* Couleur dorée pour le texte */
+  text-shadow: 2px 2px 5px #000; /* Ombre pour lisibilité */
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour améliorer la lisibilité */
+  border-radius: 10px; /* Coins arrondis pour un look plus soigné */
 }
 
 .title {
-  font-size: 2.5rem;
-  color: #ffeb3b; /* Couleur dorée pour l'effet casino */
-  text-shadow: 2px 2px 5px #000; /* Ombre pour plus de style */
+  font-size: 3rem;
   margin: 0;
   padding: 0;
   font-family: 'Pacifico', cursive; /* Une police accrocheuse */
-  background: #212121;
 }
 
 .subtitle {
-  font-size: 1.2rem;
-  color: #ffeb3b;
-  background: #212121;
+  font-size: 1.5rem;
+  color: #fff;
   margin-top: 5px;
   font-style: italic;
   font-family: 'Arial', sans-serif;
@@ -58,6 +63,7 @@ body {
 /* Styles des Rouleaux */
 .doors {
   display: flex;
+  margin-top: 20px; /* Espace entre les rouleaux et le texte */
 }
 
 .door {
@@ -94,8 +100,36 @@ button {
 
 .info {
   position: fixed;
-  bottom: 0;
-  width: 100%;
+  bottom: 100 ;
+  font-size: x-large;
+  width: 400%;
   text-align: center;
   color: #ffeb3b; /* Assortir avec le titre */
+}
+
+/* Bouton personnalisé pour le Spin */
+button#spinner {
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 15px 30px;
+  margin: 0 0.2rem 0 0.2rem;
+  color: #fff;
+  background: linear-gradient(45deg, #ae051e, #610808); /* Gradient vibrant */
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Ombre pour effet 3D */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce */
+}
+
+/* Effet de survol pour le bouton */
+button#spinner:hover {
+  transform: translateY(-5px); /* Soulève légèrement le bouton */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4); /* Augmente l'ombre pour un effet de profondeur */
+}
+
+/* Effet de clic pour le bouton */
+button#spinner:active {
+  transform: translateY(0); /* Ramène le bouton à sa position initiale */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); /* Réduit l'ombre */
 }
