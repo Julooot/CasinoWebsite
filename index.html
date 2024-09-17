@@ -134,7 +134,7 @@
       .map(box => box.firstElementChild.textContent.trim()); // Prendre le premier élément visible
 
     if (results.every(symbol => symbol === "💎")) {
-      document.querySelector(".info").textContent = "Cherche dans les outils, un fragment surgis ";
+      document.querySelector(".info").textContent = "Réponse : Cherche dans les outils, un fragment surgis ";
     } else {
       document.querySelector(".info").textContent = "La prochaine est la bonne !";
     }
