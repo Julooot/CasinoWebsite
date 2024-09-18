@@ -1,2 +1,0 @@
-# CasinoWebsite
-For School Project
