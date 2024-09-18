@@ -7,7 +7,7 @@
 </head>
 
 <header class="header">
-    <p class="subtitle">Tentez votre chance et décrochez le Jackpot !</p>
+    <p class="subtitle">100% de chance de victoire !</p>
   </header>
   <img class="logo" src=assets/logo.png>
 
@@ -32,7 +32,6 @@
   
     <p class="info"></p>
   </div>
-  
 
   <script type="text/javascript"> 
 (function () {
@@ -133,7 +132,7 @@
       .map(box => box.firstElementChild.textContent.trim()); // Prendre le premier élément visible
 
     if (results.every(symbol => symbol === "💎")) {
-      document.querySelector(".info").textContent = "Réponse : Le tiroir dispose d'un faux fond.";
+      document.querySelector(".info").textContent = "Réponse : Le tiroir dispose d'un double fond.";
     } else {                                                   
       document.querySelector(".info").textContent = "La prochaine sera la bonne !";
     }

@@ -30,6 +30,7 @@
       <button id="spinner">Tourner</button>
     </div>
     <button id="no-luck" onclick="location.href='https://julooot.github.io/rigged'" type="button">La chance n'est pas avec vous ?</button>
+
   <p class="info"></p>
   </div>
 
@@ -134,7 +135,7 @@
       .map(box => box.firstElementChild.textContent.trim()); // Prendre le premier élément visible
 
     if (results.every(symbol => symbol === "💎")) {
-      document.querySelector(".info").textContent = "Réponse : Le tiroir dispose d'un faux fond.";
+      document.querySelector(".info").textContent = "Réponse : Le tiroir dispose d'un double fond.";
     } else {
       document.querySelector(".info").textContent = "La prochaine sera la bonne !";
     }

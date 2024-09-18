@@ -29,7 +29,7 @@ body {
   color: #ffeb3b;
   text-shadow: 2px 2px 5px #000;
   padding: 10px;
-  top: 22%; left: 38%; /* à 50%/50% du parent référent */
+  top: 22%; left: 42%; /* à 50%/50% du parent référent */
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
@@ -48,7 +48,7 @@ body {
   margin-top: 5px;
   text-align: center;
   font-style: italic;
-  top: 70%; left: 50%; /* à 50%/50% du parent référent */
+  top: 70%; left: 30%; /* à 50%/50% du parent référent */
   font-family: 'Arial', sans-serif;
 }
 
@@ -131,7 +131,7 @@ button#spinner:active {
 
   .subtitle {
     font-size: 1rem; /* Réduction de la taille du sous-titre */
-    top: 70%; left: 40%; /* à 50%/50% du parent référent */
+    top: 70%; left: 30%; /* à 50%/50% du parent référent */
     text-align: center;
   }
 
