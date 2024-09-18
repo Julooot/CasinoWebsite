@@ -1,3 +1,4 @@
+
 /* Styles par défaut pour les écrans larges */
 html,
 body {
@@ -6,7 +7,9 @@ body {
   margin: 0;
   border: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Assure que les bordures et marges sont bien incluses */
+  overflow-x: hidden; /* Pour éviter les débordements horizontaux indésirables */
+  overflow-y: hidden; /* Pour éviter les débordements horizontaux indésirables */
 }
 
 #app {
@@ -29,13 +32,16 @@ body {
   color: #ffeb3b;
   text-shadow: 2px 2px 5px #000;
   padding: 10px;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  top: 10%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }
 
-.title {
+.logo {
   font-size: 2rem; /* Taille réduite pour le mobile */
-  text-align: center;
+  width: 450px;
+  position: absolute; /* postulat de départ */
+  top: 50%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }
 
 .subtitle {
@@ -43,8 +49,11 @@ body {
   color: #fff;
   margin-top: 5px;
   text-align: center;
-  font-style: italic;
+  font-style: bold ;
   font-family: 'Arial', sans-serif;
+  position: relative; /* postulat de départ */
+  top: 25%; left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
 }
 
 /* Bouton personnalisé */
@@ -115,8 +124,12 @@ button#spinner:active {
     padding: 5px;
   }
 
-  .title {
-    font-size: 1.8rem; /* Réduction de la taille du titre */
+  .logo {
+    font-size: 2rem; /* Taille réduite pour le mobile */
+    width: 450px;
+    position: absolute; /* postulat de départ */
+    top: 70%; left: 50%; /* à 50%/50% du parent référent */
+    transform: translate(-50%, -50%); /* décalage de 50% de sa propre taille */
   }
 
   .subtitle {
