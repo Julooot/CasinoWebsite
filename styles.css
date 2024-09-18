@@ -76,6 +76,30 @@ button#spinner:active {
   transform: translateY(0);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
+button#no-luck {
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  width: 150px;
+  height: 65px;
+  margin: 1rem;
+  color: #ffffff;
+  background: linear-gradient(90deg, rgb(171, 171, 171) 0%, rgb(113, 113, 113) 40%, rgb(71, 71, 71) 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button#no-luck:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+button#no-luck:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
 
 /* Ajustement des rouleaux */
 .doors {
