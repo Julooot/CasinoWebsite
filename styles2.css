@@ -1,0 +1,142 @@
+/* Styles par défaut pour les écrans larges */
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  background-image: url(background.png); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  position: absolute;
+  top: 15%; /* Ajustement pour le mobile */
+  text-align: center;
+  color: #ffeb3b;
+  text-shadow: 2px 2px 5px #000;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+
+.title {
+  font-size: 2rem; /* Taille réduite pour le mobile */
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-top: 5px;
+  text-align: center;
+  font-style: italic;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Bouton personnalisé */
+button#spinner {
+  font-size: 1rem;
+  padding: 10px 20px;
+  margin: 1rem;
+  background: linear-gradient(90deg, rgba(255,13,13,1) 0%, rgba(224,29,29,1) 40%, rgba(121,9,9,1) 100%);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button#spinner:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+}
+
+button#spinner:active {
+  transform: translateY(0);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajustement des rouleaux */
+.doors {
+  display: flex;
+  flex-direction: row; /* Les rouleaux restent en ligne */
+  margin-top: 20px;
+}
+
+.door {
+  width: 80px; /* Réduction de la taille pour les petits écrans */
+  height: 120px;
+  margin: 1rem;
+  background: #fafafa;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4) inset;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.box {
+  font-size: 2.5rem; /* Réduction de la taille du texte dans les rouleaux */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Message en bas de l'écran */
+.info {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #ffeb3b;
+}
+
+/* ----- Media Queries pour les petits écrans ----- */
+@media (max-width: 768px) {
+  #app {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .header {
+    top: 10%; /* Ajustement pour les mobiles */
+    width: 90%; /* Largeur ajustée pour s'adapter aux petits écrans */
+    padding: 5px;
+  }
+
+  .title {
+    font-size: 1.8rem; /* Réduction de la taille du titre */
+  }
+
+  .subtitle {
+    font-size: 1rem; /* Réduction de la taille du sous-titre */
+  }
+
+
+
+  .box {
+    font-size: 2rem; /* Réduction de la taille des symboles */
+  }
+
+  button#spinner {
+    font-size: 1rem;
+    padding: 8px 16px;
+    margin: 0.5rem;
+  }
+
+  .info {
+    font-size: 1rem; /* Ajustement de la taille du texte en bas pour les petits écrans */
+    bottom: 100px;
+  }
+}
