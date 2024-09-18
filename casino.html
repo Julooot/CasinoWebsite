@@ -29,8 +29,8 @@
     <div class="buttons">
       <button id="spinner">Spin</button>
     </div>
-  
-    <p class="info"></p>
+
+  <p class="info"></p>
   </div>
   
 
@@ -134,7 +134,7 @@
       .map(box => box.firstElementChild.textContent.trim()); // Prendre le premier élément visible
 
     if (results.every(symbol => symbol === "💎")) {
-      document.querySelector(".info").textContent = "Réponse : Cherche dans les outils, un fragment surgis ";
+      document.querySelector(".info").textContent = "Réponse : Le tiroir dispose d'un faux fond";
     } else {
       document.querySelector(".info").textContent = "La prochaine sera la bonne !";
     }

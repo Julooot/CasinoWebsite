@@ -172,5 +172,7 @@ button#spinner:active {
   .info {
     font-size: 1.2rem; /* Ajustement de la taille du texte en bas pour les petits écrans */
     bottom: 100px;
+    text-align: center;
+
   }
 }

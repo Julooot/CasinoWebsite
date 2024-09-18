@@ -133,8 +133,8 @@
       .map(box => box.firstElementChild.textContent.trim()); // Prendre le premier élément visible
 
     if (results.every(symbol => symbol === "💎")) {
-      document.querySelector(".info").textContent = "Réponse : Cherche dans les outils, un fragment surgis ";
-    } else {
+      document.querySelector(".info").textContent = "Réponse : Le tiroir dispose d'un faux fond ";
+    } else {                                                   
       document.querySelector(".info").textContent = "La prochaine sera la bonne !";
     }
   }
